@@ -33,7 +33,7 @@ class OnBoardFragment : Fragment() {
     }
 
     private fun initialize() = with(binding) {
-       viewPager2.adapter = OnBoardViewPagerAdapter(this@OnBoardFragment)
+        viewPager2.adapter = OnBoardViewPagerAdapter(this@OnBoardFragment)
         dotsIndicator.attachTo(viewPager2)
     }
 

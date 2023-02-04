@@ -10,12 +10,12 @@ import com.example.android2_lessen2.databinding.FragmentOnBoardPegingBinding
 
 class OnBoardPagingFragment : Fragment() {
 
-   private lateinit var binding: FragmentOnBoardPegingBinding
+    private lateinit var binding: FragmentOnBoardPegingBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-       binding = FragmentOnBoardPegingBinding.inflate(inflater,container,false)
+        binding = FragmentOnBoardPegingBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -42,7 +42,8 @@ class OnBoardPagingFragment : Fragment() {
             }
         }
     }
-    companion object{
+
+    companion object {
         const val ARG_ON_BOARD_PAGE_POSITION = "onBoardPager"
     }
 
