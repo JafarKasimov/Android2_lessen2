@@ -14,5 +14,4 @@ class OnBoardViewPagerAdapter(fragment: Fragment) : FragmentStateAdapter(fragmen
             putInt(OnBoardPagingFragment.ARG_ON_BOARD_PAGE_POSITION, position)
         }
     }
-
 }

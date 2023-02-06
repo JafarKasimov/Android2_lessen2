@@ -11,6 +11,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.android2_lessen2.R
 import com.example.android2_lessen2.databinding.FragmentOnBoardBinding
 import com.example.android2_lessen2.ui.adapters.OnBoardViewPagerAdapter
+import com.example.android2_lessen2.utils.PreferenceHelper
 
 class OnBoardFragment : Fragment() {
 
@@ -29,12 +30,13 @@ class OnBoardFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initialize()
         setupListener()
-
+        open()
     }
 
     private fun initialize() = with(binding) {
         viewPager2.adapter = OnBoardViewPagerAdapter(this@OnBoardFragment)
         dotsIndicator.attachTo(viewPager2)
+        PreferenceHelper.unit(requireContext())
     }
 
     private fun setupListener() = with(binding.viewPager2) {
@@ -65,5 +67,8 @@ class OnBoardFragment : Fragment() {
                 super.onPageSelected(position)
             }
         })
+    }
+    private fun open(){
+        PreferenceHelper.safeBool = true
     }
 }

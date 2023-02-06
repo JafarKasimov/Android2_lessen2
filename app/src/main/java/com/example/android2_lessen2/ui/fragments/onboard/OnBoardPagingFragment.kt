@@ -11,6 +11,7 @@ import com.example.android2_lessen2.databinding.FragmentOnBoardPegingBinding
 class OnBoardPagingFragment : Fragment() {
 
     private lateinit var binding: FragmentOnBoardPegingBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,12 +30,10 @@ class OnBoardPagingFragment : Fragment() {
             0 -> {
                 tvText.text = "Очень удобный функционал"
                 lottie.setAnimation(R.raw.lottie1)
-
             }
             1 -> {
                 tvText.text = "Быстрый качественный продукт"
                 lottie.setAnimation(R.raw.lottie2)
-
             }
             2 -> {
                 tvText.text = "Куча функций и интересных фишек"
@@ -46,6 +45,4 @@ class OnBoardPagingFragment : Fragment() {
     companion object {
         const val ARG_ON_BOARD_PAGE_POSITION = "onBoardPager"
     }
-
-
 }
