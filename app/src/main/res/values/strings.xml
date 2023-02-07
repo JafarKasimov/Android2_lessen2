@@ -7,4 +7,20 @@
     <string name="Пропустить">Пропустить</string>
     <string name="Начать_работу">Начать работу</string>
     <string name="Конец">конец</string>
+    <string name="Регистрацияпономеру">Регистрацияпономеру</string>
+    <string name="Регистрация_по_номеру">Регистрация_по_номеру</string>
+    <string name="Получитькод">Получить код</string>
+    <string name="Вашкод">Ваш код</string>
+    <string name="Регистрацйяпономеру">/Регистрация по номеру</string>
+    <string name="registrationbynumber">Регистрацйя по номеру</string>
+    <string name="registration_by_number">registration by number</string>
+    <string name="send_again">Send again</string>
+    <string name="_17_21">_17_21</string>
+    <string name="_30_may">_30_may</string>
+    <string name="_30_may_17_25">_30_may 17:25</string>
+    <string name="Вашномер">Ваш номер</string>
+    <string name="Готово">Готово</string>
+    <string name="tex">Text :</string>
+    <string name="te">text</string>
+    <string name="Потвердить">Потвердить</string>
 </resources>

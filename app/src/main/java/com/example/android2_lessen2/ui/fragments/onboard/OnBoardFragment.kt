@@ -1,12 +1,12 @@
 package com.example.android2_lessen2.ui.fragments.onboard
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
-import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.example.android2_lessen2.R
 import com.example.android2_lessen2.databinding.FragmentOnBoardBinding
@@ -30,13 +30,13 @@ class OnBoardFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initialize()
         setupListener()
-        open()
     }
 
     private fun initialize() = with(binding) {
         viewPager2.adapter = OnBoardViewPagerAdapter(this@OnBoardFragment)
         dotsIndicator.attachTo(viewPager2)
         PreferenceHelper.unit(requireContext())
+        PreferenceHelper.safeBool = true
     }
 
     private fun setupListener() = with(binding.viewPager2) {
@@ -45,9 +45,12 @@ class OnBoardFragment : Fragment() {
                 setCurrentItem(currentItem + 1, true)
             }
         }
+
         binding.btnK.setOnClickListener {
-            findNavController().navigate(R.id.action_onBoardFragment_to_noteAppFragment)
+            //App.preferenceHelper.safeBool = true
+            findNavController().navigate(R.id.registrationFragment)
         }
+
         binding.viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 when (position) {
@@ -67,8 +70,5 @@ class OnBoardFragment : Fragment() {
                 super.onPageSelected(position)
             }
         })
-    }
-    private fun open(){
-        PreferenceHelper.safeBool = true
     }
 }
